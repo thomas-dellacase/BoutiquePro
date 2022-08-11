@@ -116,8 +116,11 @@ class Product{
 
             $image = $insert->addImg();
             $insert = new Products();
-            $insert->insertProd(htmlspecialchars($_POST['nom']), htmlspecialchars($_POST['description']),
-            htmlspecialchars($_POST['idSousCat']),htmlspecialchars($_POST['addSelect']),htmlspecialchars($_POST['prix']), $image);
+            $insert->insertProd(htmlspecialchars($_POST['nom']),
+            htmlspecialchars($_POST['description']),
+            htmlspecialchars($_POST['idSousCat']),
+            htmlspecialchars($_POST['addSelect']),
+            htmlspecialchars($_POST['prix']), $image);
             
         
         
@@ -233,7 +236,7 @@ class Product{
             if(isset($_POST['deleteProd']))
 
             
-            $delete->deleteProd($_POST['idDel']);
+            $delete->deleteProd($_POST['idProdDel']);
             //echo 'coucou2';
         }
 //----------------------------------------------------ajouts d'img----------------------------------------------------

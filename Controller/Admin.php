@@ -39,10 +39,6 @@
         public static function displayCat(){
             $choice = new Categories();
             $tab = $choice->getCat();
-            // echo '<pre>';
-            // var_dump($tab);
-            // echo '</pre>';
-            //var_dump($tab);
             foreach($tab as $values){
                 echo '<option value="' . $values['id'] . '">' . $values['nom'] . '</option>';
                 
@@ -198,7 +194,11 @@ public static function deleteUser(){
         $delete->userDelete($_POST['idDelete']);
         header ('Location:./Admin');
     }
+    else{
+        echo "Vous n'avez pas les droits pour supprimer un Administrateur";
+    }
 }
+
 //----------------------------------------------------------------update right --------------------------------------------------------------
 
 public static function modUser(){
